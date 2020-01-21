@@ -1,4 +1,4 @@
-# RetroArcade
+# Retro Arcade
 ## Created by: Shadman Hassan
 
 This is a collection of classic, retro games built in Unity using C#.
