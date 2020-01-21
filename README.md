@@ -19,3 +19,7 @@ features and bug fixes. So far, the plan is to implement:
 For a retro game with a comedic twist, check out [Break In](https://github.com/shadmanh/Break-In)!
 Break In is my variation of the classic game Breakout, with slightly more
 plot and infinitely more humour.
+
+If you wish to run this program but don't have Unity installed, just
+download either the BuildWindows folder or the BuildMacOSX.app folder,
+depending on which OS you're running, and run the executable file!
