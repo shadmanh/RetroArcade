@@ -3,8 +3,11 @@
 
 This is a collection of classic, retro games built in Unity using C#.
 Pong is the first fully finished game to be added to this collection.
-I will periodically add new titles as well as update old ones with new
-features and bug fixes. So far, the plan is to implement:
+I was hoping to add at least 2 games with the initial commit but I was
+not able to develop a version of Snake that's to my liking in time.
+Rest assured, they will be up soon. I will periodically add new titles
+as well as update old ones with new features and bug fixes. So far,
+the plan is to implement:
 
  1. ~~Pong~~
 
