@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ballController : MonoBehaviour
 {
@@ -34,7 +35,7 @@ public class ballController : MonoBehaviour
 
         if (Input.GetKey("escape"))
         {
-            Application.Quit();
+            SceneManager.LoadScene("menu");
         }
     }
 
