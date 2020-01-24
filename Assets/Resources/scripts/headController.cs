@@ -36,6 +36,7 @@ public class headController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        World.Reset();
         pos = transform.position;
         posx = (int)transform.position.x / World.blockSize;
         posy = -1 * (int)transform.position.y / World.blockSize;
@@ -88,7 +89,7 @@ public class headController : MonoBehaviour
     //The head moves if there is nothing blocking its current direction in the world.
     virtual public void Move()
     {
-        //PrintGrid();
+        PrintGrid();
         if (oneMoveDelayDone)
         {
             oldVx = vx;

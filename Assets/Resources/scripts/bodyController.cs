@@ -14,6 +14,8 @@ public class bodyController : MonoBehaviour
     private int posx;
     private int posy;
 
+    private bool isTail = false;
+
     [SerializeField]
     private bodyController next = null;
 
@@ -25,6 +27,7 @@ public class bodyController : MonoBehaviour
         if (next == null)
         {
             sr.color = new Color(0f, 233f/255f, 1f);
+            isTail = true;
         }
 
         pos = transform.position;
@@ -42,14 +45,23 @@ public class bodyController : MonoBehaviour
     //The head moves if there is nothing blocking its current direction in the world.
     public void Move(int vx, int vy)
     {
-
-        World.grid[posy][posx] = World.FREE;
+        if (World.grid[posy][posx] != World.HEAD)
+        {
+            World.grid[posy][posx] = World.FREE;
+        }
         posy = posy - vy;
         posx = posx + vx;
-        World.grid[posy][posx] = World.BODY;
+        if (isTail)
+        {
+            World.grid[posy][posx] = World.TAIL;
+        }
+        else
+        {
+            World.grid[posy][posx] = World.BODY;
+        }
         transform.position = new Vector3(posx * World.blockSize, -1 * posy * World.blockSize, 0);
 
-        if (next != null)
+        if (!isTail)
         {
             next.Move(this.vx, this.vy);
         }

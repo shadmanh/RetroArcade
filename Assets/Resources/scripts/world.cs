@@ -51,9 +51,9 @@ public static class World
     public static void generateFood(headController head) {
         int counter = 0;
         int rightSpot = Random.Range(0, freeSpaceLeft);
-        for (int y=1; y < 10; ++y)
+        for (int y=1; y <= 10; ++y)
         {
-            for (int x=1; x < 18; ++x)
+            for (int x=1; x <= 18; ++x)
             {
                 if (grid[y][x] == FREE)
                 {
